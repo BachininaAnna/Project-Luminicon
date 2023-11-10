@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Доходы</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/index.css">
+    <title>Создание категории доходов</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
 <div class="d-flex h-100">
@@ -17,8 +16,8 @@
             </div>
             <ul class="nav nav-pills small flex-column px-3 mt-5">
                 <li>
-                    <a href="main.html" class="btn btn-outline-primary d-flex align-items-center font-14" aria-current="page">
-                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                    <a href="main.html" class="btn btn-primary d-flex align-items-center font-14" aria-current="page">
+                        <svg class="me-2 fill-white" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
                             <path clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"/>
                             <path clip-rule="evenodd"
@@ -82,81 +81,19 @@
 
         </div>
     </div>
-
     <div class="container">
-        <div class="m-xxl-5 m-xl-4 m-lg-2">
-            <h1 class="h1 pt-5 pb-2">Доходы</h1>
-
-            <div class="d-flex flex-wrap row-cols-3">
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Депозиты</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Зарплата</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Сбережения</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Инвестиции</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pe-3 pb-4">
-                    <a href="create-income.html" class="card h-100">
-                        <div class="card-body m-3">
-                            <button  class="btn text-muted fs-3 w-100 h-100" id="create-category-income">
-                               +
-                            </button>
-                        </div>
-                    </a>
-                </div>
+        <div class="m-5">
+            <h1 class="h1 pt-5 pb-2">Создание категории доходов</h1>
+            <div class="col-4 pb-1">
+                <input type="text" class="form-control" placeholder="Название...">
+            </div>
+            <div class="pt-3">
+                <button class="btn btn-success me-2">Создать</button>
+                <button class="btn btn-danger">Отмена</button>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal" id="modal-income" tabindex="-1" aria-modal="true" role="dialog">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body text-center my-4">
-                <div class="fs-5 fw-bolder text-dark mb-3 w-100">
-                    Вы действительно хотите удалить категорию?
-                    Связанные доходы будут удалены навсегда.
-                </div>
-                <div class="btn btn-success me-2">Да, удалить</div>
-                <div class="btn btn-danger">Не удалять</div>
-            </div>
-        </div>
-    </div>
 </div>
-
-<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

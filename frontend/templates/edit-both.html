@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Доходы</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/index.css">
+    <title>Редактирование дохода/расхода</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
 <div class="d-flex h-100">
@@ -15,9 +14,9 @@
                     <img src="../static/images/logo-mini.svg" alt="Логотип">
                 </a>
             </div>
-            <ul class="nav nav-pills small flex-column px-3 mt-5">
+            <ul class="nav nav-pills fs-8 flex-column px-3 mt-5">
                 <li>
-                    <a href="main.html" class="btn btn-outline-primary d-flex align-items-center font-14" aria-current="page">
+                    <a href="main.html" class="btn btn-outline-primary d-flex text-dark" aria-current="page">
                         <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
                             <path clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"/>
@@ -30,8 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="both.html" class="btn btn-outline-primary d-flex font-14
-                    text-custom-blue border-transparent">
+                    <a href="both.html" class="btn btn-outline-primary d-flex text-dark">
                         <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path clip-rule="evenodd"
                                   d="M11 15C13.2091 15 15 13.2091 15 11C15 8.79086 13.2091 7 11 7C8.79086 7 7 8.79086 7 11C7 13.2091 8.79086 15 11 15ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"/>
@@ -43,9 +41,9 @@
                     </a>
                 </li>
                 <li>
-                    <a class="btn btn-outline-primary btn-toggle
-                d-flex align-items-center justify-content-between font-14 text-custom-blue border-transparent"
-                       data-bs-toggle="collapse" data-bs-target="#menu-collapse">
+                    <a class="btn text-dark btn-outline-primary
+                d-flex align-items-center justify-content-between"
+                       data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-expanded="true">
                         Категории
                         <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
                             <path clip-rule="evenodd"
@@ -57,106 +55,57 @@
                            13.5008 0.238867 13.4479 0.145063 13.3539Z" fill=""/>
                         </svg>
                     </a>
-                    <div class="collapse border border-top-0 border-primary rounded-bottom" id="menu-collapse">
-                        <a href="income.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Доходы</a>
-                        <a href="expenses.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Расходы</a>
+                    <div class="collapse show border border-top-0 border-primary rounded-bottom" id="menu-collapse">
+                        <a href="#" class="btn btn-outline-primary d-flex rounded-0 active">Доходы</a>
+                        <a href="expenses.html" class="btn btn-outline-primary d-flex rounded-0">Расходы</a>
                     </div>
                 </li>
             </ul>
         </div>
         <div>
-            <div class="nav-link link-dark font-14 font-weight-500 mx-1 text-custom-blue">Баланс: <span class="text-primary"
-                                                                                                        id="balanceValue">500$</span></div>
+            <div class="nav-link link-dark fw-bolder mx-1">Баланс: <span class="text-primary"
+                                                                         id="balanceValue">500$</span></div>
 
             <div class="dropdown border-top">
-                <a class="btn text-custom-blue font-14 p-3 mt-1 mb-4" data-bs-toggle="collapse"
+                <a class="btn text-dark p-3 mt-1 mb-4" data-bs-toggle="collapse"
                    data-bs-target="#collapseSignOut" aria-expanded="false" aria-controls="collapseSignOut">
                     <img src="../static/images/icon-user.svg" class="me-2" alt="Фото пользователя">
                     Roman Chernov
                 </a>
                 <div class="collapse shadow card w-75 position-absolute top-0 start-100 translate-middle"
                      id="collapseSignOut">
-                    <a class="btn btn-primary" href="login.html">Выйти</a>
+                    <a class="btn" href="#">Выйти</a>
                 </div>
             </div>
-
         </div>
     </div>
-
     <div class="container">
-        <div class="m-xxl-5 m-xl-4 m-lg-2">
-            <h1 class="h1 pt-5 pb-2">Доходы</h1>
-
-            <div class="d-flex flex-wrap row-cols-3">
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Депозиты</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
+        <div class="m-5">
+            <h1 class="h1 pt-5 pb-2">Редактирование дохода/расхода</h1>
+            <div class="w-75">
+                <div class="input-group pt-1 pb-3 w-50">
+                    <input type="text" class="form-control me-5" placeholder="Тип...">
                 </div>
-
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Зарплата</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
+                <div class="input-group pt-1 pb-3 w-50">
+                    <input type="text" class="form-control me-5" placeholder="Категория...">
                 </div>
-
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Сбережения</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
+                <div class="input-group pt-1 pb-3 w-50">
+                    <input type="text" class="form-control me-5" placeholder="Сумма в $...">
                 </div>
-
-                <div class="pe-3 pb-4">
-                    <div class="card">
-                        <div class="card-body m-1">
-                            <h2 class="mb-2 pb-1">Инвестиции</h2>
-                            <div class="btn btn-primary me-2">Редактировать</div>
-                            <div class="btn btn-danger">Удалить</div>
-                        </div>
-                    </div>
+                <div class="input-group pt-1 pb-3 w-50">
+                    <input type="text" class="form-control me-5" placeholder="Дата...">
                 </div>
-
-                <div class="pe-3 pb-4">
-                    <a href="create-income.html" class="card h-100">
-                        <div class="card-body m-3">
-                            <button  class="btn text-muted fs-3 w-100 h-100" id="create-category-income">
-                               +
-                            </button>
-                        </div>
-                    </a>
+                <div class="input-group pt-1 pb-3 w-50">
+                    <input type="text" class="form-control me-5" placeholder="Комментарий...">
                 </div>
+            </div>
+            <div class="pt-1">
+                <button class="btn btn-success me-2">Создать</button>
+                <button class="btn btn-danger">Отмена</button>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal" id="modal-income" tabindex="-1" aria-modal="true" role="dialog">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body text-center my-4">
-                <div class="fs-5 fw-bolder text-dark mb-3 w-100">
-                    Вы действительно хотите удалить категорию?
-                    Связанные доходы будут удалены навсегда.
-                </div>
-                <div class="btn btn-success me-2">Да, удалить</div>
-                <div class="btn btn-danger">Не удалять</div>
-            </div>
-        </div>
-    </div>
 </div>
-
-<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

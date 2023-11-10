@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
-<body>
+<body >
 
 <div class="d-flex h-100">
     <div class="d-flex flex-column flex-shrink-0 justify-content-between border-end" style="width: 219px;">
@@ -15,10 +16,10 @@
                     <img src="../static/images/logo-mini.svg" alt="Логотип">
                 </a>
             </div>
-            <ul class="nav nav-pills fs-8 flex-column px-3 mt-5">
+            <ul class="nav nav-pills small flex-column px-3 mt-5">
                 <li>
-                    <a href="#" class="btn btn-outline-primary d-flex text-dark active" aria-current="page">
-                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                    <a href="#" class="btn btn-outline-primary active d-flex align-items-center font-14" aria-current="page">
+                        <svg class="me-2 fill-white" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
                             <path clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"/>
                             <path clip-rule="evenodd"
@@ -30,7 +31,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="income-expenses.html" class="btn btn-outline-primary d-flex text-dark">
+                    <a href="both.html" class="btn btn-outline-primary d-flex font-14
+                    text-custom-blue border-transparent">
                         <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path clip-rule="evenodd"
                                   d="M11 15C13.2091 15 15 13.2091 15 11C15 8.79086 13.2091 7 11 7C8.79086 7 7 8.79086 7 11C7 13.2091 8.79086 15 11 15ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"/>
@@ -42,8 +44,8 @@
                     </a>
                 </li>
                 <li>
-                    <a class="btn text-dark btn-outline-primary
-                d-flex align-items-center justify-content-between"
+                    <a class="btn btn-outline-primary btn-toggle
+                d-flex align-items-center justify-content-between font-14 text-custom-blue border-transparent"
                        data-bs-toggle="collapse" data-bs-target="#menu-collapse">
                         Категории
                         <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
@@ -57,25 +59,25 @@
                         </svg>
                     </a>
                     <div class="collapse border border-top-0 border-primary rounded-bottom" id="menu-collapse">
-                        <a href="income.html" class="btn btn-outline-primary d-flex rounded-0">Доходы</a>
-                        <a href="expenses.html" class="btn btn-outline-primary d-flex rounded-0">Расходы</a>
+                        <a href="income.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Доходы</a>
+                        <a href="expenses.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Расходы</a>
                     </div>
                 </li>
             </ul>
         </div>
         <div>
-            <div class="nav-link link-dark fw-bolder mx-1">Баланс: <span class="text-primary"
+            <div class="nav-link link-dark font-14 font-weight-500 mx-1 text-custom-blue">Баланс: <span class="text-primary"
                                                                          id="balanceValue">500$</span></div>
 
             <div class="dropdown border-top">
-                <a class="btn text-dark p-3 mt-1 mb-4" data-bs-toggle="collapse"
+                <a class="btn text-custom-blue font-14 p-3 mt-1 mb-4" data-bs-toggle="collapse"
                    data-bs-target="#collapseSignOut" aria-expanded="false" aria-controls="collapseSignOut">
                     <img src="../static/images/icon-user.svg" class="me-2" alt="Фото пользователя">
                     Roman Chernov
                 </a>
                 <div class="collapse shadow card w-75 position-absolute top-0 start-100 translate-middle"
                      id="collapseSignOut">
-                    <a class="btn" href="#">Выйти</a>
+                    <a class="btn btn-primary" href="login.html">Выйти</a>
                 </div>
             </div>
 
@@ -84,43 +86,53 @@
 
     <div class="container">
         <div class="m-5">
-            <h1 class="h1 pt-5 pb-2">Главная</h1>
+            <h1 class="text-custom-blue pt-5 pb-2">Главная</h1>
             <div class="mt-4">
-                <button type="button" class="active btn btn-outline-secondary fs-6 fw-bolder me-3" id="btn-today"
+                <button class="active btn btn-outline-secondary font-weight-500 me-3" id="btn-today"
                         style="width: 100px;">Сегодня
                 </button>
-                <button type="button" class="btn btn-outline-secondary fs-6 fw-bolder me-3 ms-1" id="btn-week"
+                <button type="button" class="btn btn-outline-secondary font-weight-500 me-3 ms-1" id="btn-week"
                         style="width: 100px;">Неделя
                 </button>
-                <button type="button" class="btn btn-outline-secondary fs-6 fw-bolder me-3 ms-1" id="btn-month"
+                <button type="button" class="btn btn-outline-secondary font-weight-500 me-3 ms-1" id="btn-month"
                         style="width: 100px;">Месяц
                 </button>
-                <button type="button" class="btn btn-outline-secondary fs-6 fw-bolder me-3 ms-1" id="btn-year"
+                <button type="button" class="btn btn-outline-secondary font-weight-500 me-3 ms-1" id="btn-year"
                         style="width: 100px;">Год
                 </button>
-                <button type="button" class="btn btn-outline-secondary fs-6 fw-bolder me-3 ms-1" id="btn-all-time"
+                <button type="button" class="btn btn-outline-secondary font-weight-500 me-3 ms-1" id="btn-all-time"
                         style="width: 100px;">Все
                 </button>
-                <button type="button" class="btn btn-outline-secondary fs-6 fw-bolder me-3 ms-1" id="btn-interval"
+                <button type="button" class="btn btn-outline-secondary font-weight-500 me-3 ms-1" id="btn-interval"
                         style="width: 100px;">Интервал
                 </button>
 
-                    <span class="me-3 ms-1">c</span>
-                    <a href="#" class="link-secondary me-4">Дата</a>
-                    <span class="me-3 ms-1">по</span>
-                    <a href="#" class="link-secondary me-1">Дата</a>
+                    <span class="me-3 ms-1 font-weight-500">c</span>
+                    <a href="#" class="link-secondary text-decoration-none me-4
+                    font-weight-500 border-bottom border-secondary">Дата</a>
+                    <span class="me-3 ms-1 font-weight-500">по</span>
+                    <a href="#" class="link-secondary text-decoration-none me-1
+                    font-weight-500 border-bottom border-secondary">Дата</a>
 
             </div>
         </div>
 
-        <div class="d-flex align-items-center justify-content-around" style="height: 467px;">
-            <div class="bg-danger h-50" style="width: 437px;">dd</div>
-            <div class="border-end border-gray h-50"></div>
-            <div class="bg-danger h-50" style="width: 437px;">dd</div>
+        <div class="d-flex flex-wrap align-items-center justify-content-around" style="height: 467px">
+
+                <canvas id="pie-incomes" style="height: 467px; width: 437px;"></canvas>
+
+            <div class="d-none border-end border-gray d-xl-block h-75"></div>
+
+                <canvas id="pie-expenses" style="height: 467px; width: 437px;"></canvas>
+
         </div>
     </div>
 </div>
+
 <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script src="../script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type="module" src="../src/components/pie.js"></script>
+
 </body>
 </html>

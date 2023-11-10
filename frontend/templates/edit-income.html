@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Расходы</title>
+  <title>Редактирование категории доходов</title>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
@@ -56,8 +56,8 @@
             </svg>
           </a>
           <div class="collapse show border border-top-0 border-primary rounded-bottom" id="menu-collapse">
-            <a href="income.html" class="btn btn-outline-primary d-flex rounded-0">Доходы</a>
-            <a href="#" class="btn btn-outline-primary d-flex rounded-0 active">Расходы</a>
+            <a href="#" class="btn btn-outline-primary d-flex rounded-0 active">Доходы</a>
+            <a href="expenses.html" class="btn btn-outline-primary d-flex rounded-0">Расходы</a>
           </div>
         </li>
       </ul>
@@ -80,127 +80,18 @@
     </div>
   </div>
   <div class="container">
-    <div class="m-xxl-5 m-xl-4 m-lg-2">
-      <h1 class="h1 pt-5 pb-2">Расходы</h1>
-
-      <div class="d-flex flex-wrap row-cols-3">
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Еда</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Жильё</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Здоровье</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Кафе</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Авто</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Одежда</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Развлечения</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Счета</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <div class="card">
-            <div class="card-body m-1">
-              <h2 class="mb-2 pb-1">Спорт</h2>
-              <div class="btn btn-primary me-2">Редактировать</div>
-              <div class="btn btn-danger">Удалить</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pe-3 pb-4">
-          <a href="create-expenses.html" class="card h-100">
-            <div class="card-body m-3">
-              <button class="btn text-muted fs-3 w-100 h-100">+</button>
-            </div>
-          </a>
-        </div>
+    <div class="m-5">
+      <h1 class="h1 pt-5 pb-2">Редактирование категории доходов</h1>
+      <div class="col-4 pb-1">
+        <input type="text" class="form-control" placeholder="Зарплата">
+      </div>
+      <div class="pt-3">
+        <button class="btn btn-success me-2">Сохранить</button>
+        <button class="btn btn-danger">Отмена</button>
       </div>
     </div>
   </div>
-</div>
 
-<div class="modal show d-block" id="modal-expenses" tabindex="-1" aria-modal="true" role="dialog">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body text-center my-4">
-        <div class="fs-5 fw-bolder text-dark mb-3 w-100">
-          Вы действительно хотите удалить категорию?
-        </div>
-        <div class="btn btn-success me-2">Да, удалить</div>
-        <div class="btn btn-danger">Не удалять</div>
-      </div>
-    </div>
-  </div>
 </div>
-
-<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
