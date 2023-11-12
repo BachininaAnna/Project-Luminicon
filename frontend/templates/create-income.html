@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Создание категории доходов</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
 <div class="d-flex h-100">
@@ -16,8 +17,9 @@
             </div>
             <ul class="nav nav-pills small flex-column px-3 mt-5">
                 <li>
-                    <a href="main.html" class="btn btn-primary d-flex align-items-center font-14" aria-current="page">
-                        <svg class="me-2 fill-white" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
+                    <a href="main.html" class="btn btn-outline-primary d-flex align-items-center font-14
+                        text-custom-blue border-transparent" aria-current="page">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
                             <path clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"/>
                             <path clip-rule="evenodd"
@@ -44,7 +46,7 @@
                 <li>
                     <a class="btn btn-outline-primary btn-toggle
                 d-flex align-items-center justify-content-between font-14 text-custom-blue border-transparent"
-                       data-bs-toggle="collapse" data-bs-target="#menu-collapse">
+                       data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-expanded="true">
                         Категории
                         <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
                             <path clip-rule="evenodd"
@@ -56,16 +58,17 @@
                            13.5008 0.238867 13.4479 0.145063 13.3539Z" fill=""/>
                         </svg>
                     </a>
-                    <div class="collapse border border-top-0 border-primary rounded-bottom" id="menu-collapse">
-                        <a href="income.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Доходы</a>
+                    <div class="collapse show border border-top-0 border-primary rounded-bottom" id="menu-collapse">
+                        <a href="income.html" class="btn btn-outline-primary active d-flex border-0 rounded-0 font-14">Доходы</a>
                         <a href="expenses.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Расходы</a>
                     </div>
                 </li>
             </ul>
         </div>
         <div>
-            <div class="nav-link link-dark font-14 font-weight-500 mx-1 text-custom-blue">Баланс: <span class="text-primary"
-                                                                                                        id="balanceValue">500$</span></div>
+            <div class="nav-link link-dark font-14 font-weight-500 mx-1 text-custom-blue">Баланс: <span
+                    class="text-primary"
+                    id="balanceValue">500$</span></div>
 
             <div class="dropdown border-top">
                 <a class="btn text-custom-blue font-14 p-3 mt-1 mb-4" data-bs-toggle="collapse"
@@ -83,17 +86,17 @@
     </div>
     <div class="container">
         <div class="m-5">
-            <h1 class="h1 pt-5 pb-2">Создание категории доходов</h1>
+            <h1 class="text-custom-blue pt-5 pb-2">Создание категории доходов</h1>
             <div class="col-4 pb-1">
-                <input type="text" class="form-control" placeholder="Название...">
+                <input type="text" class="form-control font-15" placeholder="Название...">
             </div>
             <div class="pt-3">
-                <button class="btn btn-success me-2">Создать</button>
-                <button class="btn btn-danger">Отмена</button>
+                <button class="btn btn-success me-2 font-14 font-weight-500" id="create-inc">Создать</button>
+                <button class="btn btn-danger font-14 font-weight-500" id="inc-cancel">Отмена</button>
             </div>
         </div>
     </div>
-
 </div>
+<script type="module" src="../src/components/income.js"></script>
 </body>
 </html>

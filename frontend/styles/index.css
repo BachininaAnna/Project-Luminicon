@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
 html {
     height: 100%;
 }
@@ -57,4 +58,11 @@ body {
     background-color: #0d6efd;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.rounded-4 {
+    border-radius: 12px;
+}
+.bg-modal {
+    background: rgba(0, 0, 0, 0.25);
 }
