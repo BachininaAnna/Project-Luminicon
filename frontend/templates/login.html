@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Страница авторизации</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
-<body class="h-100">
+<body>
 
 <div class="container d-flex justify-content-center align-items-center text-center h-100">
     <form class="needs-validation" novalidate style="width: 397px;">
         <img class="mb-5 pb-2" src="../static/images/logo.svg" alt="Логотип">
-        <h1 class="text-dark mb-3 py-1">Вход</h1>
+        <h1 class="text-custom-blue mb-3 py-1">Вход</h1>
 
         <div class="input-group mb-2">
             <span class="input-group-text p-0 rounded-0 rounded-start">
@@ -33,17 +33,17 @@
             </div>
         </div>
 
-        <div class="form-check mb-3 text-start d-flex align-items-center">
+        <div class="form-check mb-3 text-start">
             <input class="form-check-input me-2" type="checkbox" id="rememberCheck" required>
-            <label class="form-check-label small" for="rememberCheck">Запомнить меня</label>
+            <label class="form-check-label font-12 align-middle" for="rememberCheck">Запомнить меня</label>
         </div>
 
         <button class="w-100 btn btn-primary mb-2" type="submit" id="btnEnter">Войти</button>
 
-        <p class="text-start small">Ещё нет аккаунта?<a href="signup.html" class="ms-2">Пройдите регистрацию</a></p>
+        <p class="text-start font-12">Ещё нет аккаунта?<a href="signup.html" class="ms-2">Пройдите регистрацию</a></p>
     </form>
 </div>
 
-<script type="module" src="../src/components/forms.js"></script>">
+<script type="module" src="../src/components/forms.js"></script>
 </body>
 </html>
