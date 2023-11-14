@@ -1,3 +1,7 @@
 import {Popup} from "../utilis/popup.js";
 
-Popup.show();
+export class Both {
+    constructor() {
+        Popup.show();
+    }
+}

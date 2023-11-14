@@ -1,5 +1,8 @@
 import {Form} from "./components/form.js";
-import {Popup} from "./utilis/popup.js";
+import {Main} from "./components/main.js";
+import {Incomes} from "./components/incomes.js";
+import {Expenses} from "./components/expenses.js";
+import {Both} from "./components/both.js";
 
 export class Router {
     constructor() {
@@ -8,17 +11,14 @@ export class Router {
                 route: '#/',
                 title: 'Главная',
                 template: 'templates/main.html',
-                styles: 'styles/index.css',
                 load: () => {
-
+                   new Main();
                 }
             },
             {
                 route: '#/form',
                 title: 'Регистрация',
                 template: 'templates/login.html',
-                styles: 'styles/index.css',
-                modal: '',
                 load: () => {
                     new Form();
                 }
@@ -27,30 +27,43 @@ export class Router {
                 route: '#/income',
                 title: 'Доходы',
                 template: 'templates/income.html',
-                styles: 'styles/index.css',
                 modal: 'Вы действительно хотите удалить категорию? Связанные доходы будут удалены навсегда.',
                 load: () => {
-                    Popup.show();
+                    new Incomes();
                 }
             },
             {
                 route: '#/expenses',
                 title: 'Расходы',
                 template: 'templates/expenses.html',
-                styles: 'styles/index.css',
                 modal: 'Вы действительно хотите удалить категорию?',
                 load: () => {
-                    Popup.show();
+                    new Expenses();
                 }
             },
             {
                 route: '#/both',
-                title: 'Доходы',
+                title: 'Доходы и Расходы',
                 template: 'templates/both.html',
-                styles: 'styles/index.css',
                 modal: 'Вы действительно хотите удалить операцию?',
                 load: () => {
-                    Popup.show();
+                    new Both();
+                }
+            },
+            {
+                route: '#/create-income',
+                title: 'Доходы',
+                template: 'templates/create-income.html',
+                load: () => {
+                    new Incomes();
+                }
+            },
+            {
+                route: '#/edit-income',
+                title: 'Доходы',
+                template: 'templates/edit-income.html',
+                load: () => {
+                    new Incomes();
                 }
             }
         ]
@@ -68,7 +81,10 @@ export class Router {
         document.getElementById('content').innerHTML =
             await fetch(newRoute.template).then(response => response.text());
         document.getElementById('title').innerText = newRoute.title;
-        document.getElementById('modal-text').innerText = newRoute.modal;
+        if(newRoute.modal){
+            document.getElementById('modal-text').innerText = newRoute.modal;
+        }
+
         newRoute.load();
     }
 }
