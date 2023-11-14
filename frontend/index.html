@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title id="title">Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <div>
             <div class="border-bottom">
                 <a href="#" class="d-block text-center my-3 pb-1 pt-4">
-                    <img src="../static/images/logo-mini.svg" alt="Логотип">
+                    <img src="static/images/logo-mini.svg" alt="Логотип">
                 </a>
             </div>
             <ul class="nav nav-pills small flex-column px-3 mt-5">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="btn active btn-outline-primary btn-toggle
+                    <a class="btn btn-outline-primary btn-toggle
                 d-flex align-items-center justify-content-between font-14 text-custom-blue border-transparent"
                        data-bs-toggle="collapse" data-bs-target="#menu-collapse">
                         Категории
@@ -61,9 +61,9 @@
                         </svg>
                     </a>
                     <div class="collapse border border-top-0 border-primary rounded-bottom" id="menu-collapse">
-                        <a href="income.html"
+                        <a href="templates/income.html"
                            class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Доходы</a>
-                        <a href="expenses.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Расходы</a>
+                        <a href="templates/expenses.html" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Расходы</a>
                     </div>
                 </li>
             </ul>
@@ -76,24 +76,25 @@
             <div class="dropdown border-top">
                 <a class="btn text-custom-blue font-14 p-3 mt-1 mb-4" data-bs-toggle="collapse"
                    data-bs-target="#collapseSignOut" aria-expanded="false" aria-controls="collapseSignOut">
-                    <img src="../static/images/icon-user.svg" class="me-2" alt="Фото пользователя">
+                    <img src="static/images/icon-user.svg" class="me-2" alt="Фото пользователя">
                     Roman Chernov
                 </a>
                 <div class="collapse shadow card w-75 position-absolute top-0 start-100 translate-middle"
                      id="collapseSignOut">
-                    <a class="btn btn-primary" href="login.html">Выйти</a>
+                    <a class="btn btn-primary" href="templates/login.html">Выйти</a>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <div class="container">
-
+    <div id="content">
 
     </div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="../src/components/pie.js"></script>
+</div>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="src/components/pie.js"></script>
+<script type="module" src="src/app.js"></script>
 </body>
 </html>
