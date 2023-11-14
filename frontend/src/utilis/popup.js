@@ -8,7 +8,7 @@ export class Popup {
 
         if (buttonsDelete && modal) {
             buttonsDelete.forEach(item => {
-                item.on('click', function () {
+                item.addEventListener('click', function () {
                     modal.classList.add('d-block');
                 })
             })

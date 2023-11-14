@@ -1,3 +1,5 @@
+import Chart from 'chart.js/auto';
+
 //const DATA_COUNT = 5;
 //const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
 const CHART_COLORS = ['#DC3545', '#FD7E14', '#FFC107', '#0D6EFD', '#20C997'];
@@ -5,8 +7,6 @@ const incomesPer = [20, 30, 15, 15, 20];
 const incomesCategory = ['Red', 'Orange', 'Yellow', 'Green', 'Blue'];
 const expensesPer = [30, 30, 15, 15, 10];
 const expensesCategory = ['Red', 'Orange', 'Yellow', 'Green', 'Blue'];
-
-
 
 function data(arrPercentages, arrCategory) {
     return  {
@@ -21,8 +21,8 @@ function data(arrPercentages, arrCategory) {
     };
 }
 
-
 const pieIncomes = document.getElementById('pie-incomes');
+console.log(pieIncomes);
 new Chart(pieIncomes, {
     type: 'pie',
     data: data(incomesPer, incomesCategory),
