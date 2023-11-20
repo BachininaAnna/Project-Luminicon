@@ -3,6 +3,8 @@ import {Main} from "./components/main.js";
 import {Incomes} from "./components/incomes.js";
 import {Expenses} from "./components/expenses.js";
 import {Both} from "./components/both.js";
+import {NavLinks} from "./utilis/nav-links.js";
+
 
 export class Router {
     constructor() {
@@ -12,15 +14,25 @@ export class Router {
                 title: 'Главная',
                 template: 'templates/main.html',
                 load: () => {
-                   new Main();
+                    new Main();
                 }
             },
             {
-                route: '#/form',
+                route: '#/signup',
                 title: 'Регистрация',
-                template: 'templates/login.html',
+                template: 'templates/signup.html',
+                modal:'',
                 load: () => {
-                    new Form();
+                    new Form('signup');
+                }
+            },
+            {
+                route: '#/login',
+                title: 'Вход в систему',
+                template: 'templates/login.html',
+                modal:'',
+                load: () => {
+                    new Form('login');
                 }
             },
             {
@@ -65,26 +77,66 @@ export class Router {
                 load: () => {
                     new Incomes();
                 }
+            },
+            {
+                route: '#/create-expenses',
+                title: 'Расходы',
+                template: 'templates/create-expenses.html',
+                load: () => {
+                    new Expenses();
+                }
+            },
+            {
+                route: '#/edit-expenses',
+                title: 'Расходы',
+                template: 'templates/edit-expenses.html',
+                load: () => {
+                    new Expenses();
+                }
+            },
+            {
+                route: '#/create-both',
+                title: 'Доходы и Расходы',
+                template: 'templates/create-both.html',
+                load: () => {
+                    new Both();
+                }
+            },
+            {
+                route: '#/edit-both',
+                title: 'Доходы и Расходы',
+                template: 'templates/edit-both.html',
+                load: () => {
+                    new Both();
+                }
             }
         ]
     }
 
-    async openRoute(){
+    async openRoute() {
         const newRoute = this.routes.find(item => {
             return item.route === window.location.hash;
         })
         if (!newRoute) {
-            window.location.href = '#/form';
+            window.location.href = '#/login';
             return;
         }
 
         document.getElementById('content').innerHTML =
             await fetch(newRoute.template).then(response => response.text());
         document.getElementById('title').innerText = newRoute.title;
-        if(newRoute.modal){
+        if (newRoute.modal) {
             document.getElementById('modal-text').innerText = newRoute.modal;
         }
 
+        const navbar = document.getElementById('navbar');
+        if (newRoute.route === '#/signup' || newRoute.route === '#/login') {
+            navbar.classList.add('d-none');
+        } else {
+            navbar.classList.remove('d-none');
+        }
+
+        NavLinks.isActive(newRoute.title);
         newRoute.load();
     }
 }

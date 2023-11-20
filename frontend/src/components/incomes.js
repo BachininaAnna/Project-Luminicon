@@ -1,11 +1,12 @@
-import {Popup} from "../utilis/popup.js";
+import {ButtonsDelete} from "../utilis/buttons-delete.js";
 import {ButtonsEdit} from "../utilis/buttons-edit.js";
+import {ButtonCancel} from "../utilis/button-cancel.js";
 
 export class Incomes {
     constructor() {
-        this.buttonsEdit = document.querySelectorAll('button.edit');
-        Popup.show();
-        ButtonsEdit.redirection(this.buttonsEdit,'#/edit-income');
+        ButtonsDelete. popupShow();
+        ButtonsEdit.redirection('#/edit-income');
+        ButtonCancel.redirection('#/income');
     }
 }
 

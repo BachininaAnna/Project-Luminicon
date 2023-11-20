@@ -1,5 +1,5 @@
-export class Popup {
-    static show() {
+export class ButtonsDelete {
+    static popupShow() {
         const buttonsDelete = document.querySelectorAll('button.delete');
         const modal = document.getElementById('modal');
 

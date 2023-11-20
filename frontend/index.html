@@ -9,7 +9,7 @@
 <body>
 
 <div class="d-flex h-100">
-    <div class="d-flex flex-column flex-shrink-0 justify-content-between border-end" style="width: 219px;">
+    <div class="d-flex flex-column flex-shrink-0 justify-content-between border-end" id="navbar" style="width: 219px;">
         <div>
             <div class="border-bottom">
                 <a href="#/" class="d-block text-center my-3 pb-1 pt-4">
@@ -18,9 +18,9 @@
             </div>
             <ul class="nav nav-pills small flex-column px-3 mt-5">
                 <li>
-                    <a href="#/" class="btn btn-outline-primary active d-flex align-items-center font-14"
-                       aria-current="page">
-                        <svg class="me-2 fill-white" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
+                    <a href="#/" class="btn btn-outline-primary d-flex font-14 text-custom-blue border-transparent"
+                       aria-current="page" id="navbar-main">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="15" height="14"
                              viewBox="0 0 15 14">
                             <path clip-rule="evenodd"
                                   d="M1.5 12.3964V5.89641H2.5V12.3964C2.5 12.6726 2.72386 12.8964 3 12.8964H12C12.2761 12.8964 12.5 12.6726 12.5 12.3964V5.89641H13.5V12.3964C13.5 13.2248 12.8284 13.8964 12 13.8964H3C2.17157 13.8964 1.5 13.2248 1.5 12.3964Z"/>
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#/both" class="btn btn-outline-primary d-flex font-14 text-custom-blue border-transparent">
+                    <a href="#/both" class="btn btn-outline-primary d-flex font-14 text-custom-blue border-transparent" id="navbar-both">
                         <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path clip-rule="evenodd"
                                   d="M11 15C13.2091 15 15 13.2091 15 11C15 8.79086 13.2091 7 11 7C8.79086 7 7 8.79086 7 11C7 13.2091 8.79086 15 11 15ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"/>
@@ -47,7 +47,7 @@
                 <li>
                     <a class="btn btn-outline-primary btn-toggle
                 d-flex align-items-center justify-content-between font-14 text-custom-blue border-transparent"
-                       data-bs-toggle="collapse" data-bs-target="#menu-collapse">
+                       data-bs-toggle="collapse" data-bs-target="#menu-collapse" id="navbar-category">
                         Категории
                         <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
                             <path clip-rule="evenodd"
@@ -60,8 +60,8 @@
                         </svg>
                     </a>
                     <div class="collapse border border-top-0 border-primary rounded-bottom" id="menu-collapse">
-                        <a href="#/income" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Доходы</a>
-                        <a href="#/expenses" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14">Расходы</a>
+                        <a href="#/income" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14" id="navbar-incomes">Доходы</a>
+                        <a href="#/expenses" class="btn btn-outline-primary d-flex border-0 rounded-0 font-14" id="navbar-expenses">Расходы</a>
                     </div>
                 </li>
             </ul>
@@ -78,7 +78,7 @@
                 </a>
                 <div class="collapse shadow card w-75 position-absolute top-0 start-100 translate-middle"
                      id="collapseSignOut">
-                    <a class="btn btn-primary" href="#/form">Выйти</a>
+                    <a class="btn btn-primary" href="#/login">Выйти</a>
                 </div>
             </div>
 

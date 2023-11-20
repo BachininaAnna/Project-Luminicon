@@ -24,7 +24,7 @@ body {
     fill: #052C65;
 }
 
-.fill-white {
+.active > svg {
     fill: #fff;
 }
 
